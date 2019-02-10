@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 })*/
 
 app.get('/accounts', (req, res, next) => {
-    console.log('accounts inline middleware')
+    console.log('accounts inline middleware!  Yahoo!')
     next(new Error('Opsss'))
 },(req, res) => {
     console.log(`${req.method}: ${req.url}`)
