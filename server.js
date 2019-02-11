@@ -35,7 +35,7 @@ app.get('/accounts', (req, res, next) => {
 
 app.get('/transactions', (req, res) => {
     console.log(`${req.method}: ${req.url}`)
-    res.send({msg:'transactions. Yahooooooooo!'})
+    res.send({msg:'transactions. Yahooooooooo! OK'})
 })
 
 app.use((error, req, res, next) => {
