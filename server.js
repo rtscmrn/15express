@@ -2,6 +2,8 @@
 const express = require('express')
 //instantiations
 const app = express()
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
 
 //middleware
 app.use((req, res, next) => {
@@ -34,6 +36,7 @@ app.get('/accounts', (req, res, next) => {
 
 
 app.get('/transactions', (req, res) => {
+    console.log(req.body)
     console.log(`${req.method}: ${req.url}`)
     res.send({msg:'transactions. Yahooooooooo! OK'})
 })
